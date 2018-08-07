@@ -1,0 +1,34 @@
+<head>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/split.js/1.2.0/split.min.js"></script>
+    <style>
+        .gutter {
+            background-repeat: no-repeat;
+            background-position: 50%;
+        }
+
+        .gutter.gutter-horizontal {
+            cursor: col-resize;
+            background-image: url('vertical.png');
+        }
+
+        .split.split-horizontal,
+        .gutter.gutter-horizontal {
+            height: 100%;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+<div id="a" class="split split-horizontal">
+    left
+</div>
+<div id="b" class="split split-horizontal">
+    <iframe frameborder="no" style="height: 100%; width: 100%;" src="test.png"></iframe>
+</div>
+<script>
+    Split(['#a', '#b'], {
+        gutterSize: 8,
+        cursor: 'col-resize'
+    })
+</script>
+</body>
